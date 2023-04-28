@@ -1,19 +1,8 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import StandardPage from '../layouts/StandardPage.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="m-auto p-5 max-w-2xl text-left bg-white break-words leading-normal text-gray-600">
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1 class="">Test if tailwind works</h1>
-		</main>
-		
-	</body>
-</html>
+<StandardPage title={SITE_TITLE} description={SITE_DESCRIPTION}>
+	<p>Home page</p>
+</StandardPage>

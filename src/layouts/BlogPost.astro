@@ -16,12 +16,16 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 		
 	</head>
 
-	<body>
-		<Header />
-		<main>
+	<body class="max-w-2xl text-left bg-white leading-normal text-gray-600">
+		
+		<main class="flex flex-row">
+			<nav class="underline flex flex-col min-w-fit">
+				<a href="">Back to posts</a>
+				<a href="">Back to homepage</a>
+			</nav>
+		
 			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="">{title}</h1>
+				<h1 class="text-2xl">{title}</h1>
 				<FormattedDate date={pubDate} />
 				{
 					updatedDate && (
