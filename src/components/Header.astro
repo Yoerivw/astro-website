@@ -1,18 +1,18 @@
 ---
 import HeaderLink from './HeaderLink.astro';
-import { SITE_TITLE } from '../consts';
 ---
 
-<header>
-	<h2>
-		{SITE_TITLE}
-	</h2>
-	<nav>
-		<HeaderLink href="/">Home</HeaderLink>
-		<HeaderLink href="/blog">Blog</HeaderLink>
-		<HeaderLink href="/about">About</HeaderLink>
-		<HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink>
-		<HeaderLink href="https://www.linkedin.com/in/yoerivw/" target="_blank">Linkedin</HeaderLink>
-	</nav>
-</header>
+
+	<aside class="flex-2 p-5">
+			<ul class="flex flex-col">
+				<li><HeaderLink href="/">Home</HeaderLink></li>
+				<li><HeaderLink href="/blog">Blog</HeaderLink></li>
+				<li><HeaderLink href="/about">About</HeaderLink></li>
+				<li><HeaderLink href="https://github.com/withastro/astro" target="_blank">GitHub</HeaderLink></li>
+				<li><HeaderLink href="https://www.linkedin.com/in/yoerivw/" target="_blank">Linkedin</HeaderLink></li>
+			</ul>
+	
+	  </aside>
+	
+
 

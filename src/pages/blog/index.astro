@@ -9,13 +9,15 @@ const posts = (await getCollection('blog')).sort(
 ---
 
 <StandardPage title={`Blog Section`} description={`This is where all my blogpost will show`}>
-	<section>
+	<section class="container pl-20">
+		<h1 class="text-4xl mb-6">Writings</h1>
 		<ul>
 			{
 				posts.map((post) => (
-					<li>
-						<FormattedDate date={post.data.pubDate} />
-						<a href={`/blog/${post.slug}/`}>{post.data.title}</a>
+					<li class="mb-5">
+						<div class="text-xs text-gray-600"><FormattedDate date={post.data.pubDate} /></div>
+						<a href={`/blog/${post.slug}/`} class="text-2xl">{post.data.title}</a>
+						<p class="text-black">{post.data.description}</p>
 					</li>
 				))
 			}

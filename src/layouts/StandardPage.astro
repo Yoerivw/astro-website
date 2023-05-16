@@ -1,7 +1,7 @@
 ---
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+
 
 
 const { title, description } = Astro.props;
@@ -12,11 +12,15 @@ const { title, description } = Astro.props;
 		<BaseHead title={title} description={description} />
 	</head>
 
-	<body class="m-auto p-5 max-w-2xl text-left bg-white break-words leading-normal text-gray-600">
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
+	<body class="text-left bg-slate-50 break-words leading-normal text-gray-600 overflow-hidden h-screen">
+		<div class="flex h-full">
+			<Header />
+			<main class="overflow-y-auto w-full  pt-5">
+			  <div class="wrapper_inner">
+				<slot />
+			   </div>
+			 </main>
+		   </div>
+		
 	</body>
 </html>
